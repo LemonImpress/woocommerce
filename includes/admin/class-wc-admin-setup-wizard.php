@@ -1022,9 +1022,8 @@ class WC_Admin_Setup_Wizard {
 		<form method="post" class="wc-wizard-payment-gateway-form">
 			<p>
 				<?php printf( __(
-					'WooCommerce can accept both online and offline payments. <a href="%1$s" target="_blank">Additional payment methods</a> can be installed later and managed from the <a href="%2$s" target="_blank">checkout settings</a> screen.', 'woocommerce' ),
-					esc_url( admin_url( 'admin.php?page=wc-addons&view=payment-gateways' ) ),
-					esc_url( admin_url( 'admin.php?page=wc-settings&tab=checkout' ) )
+					'WooCommerce can accept both online and offline payments. <a href="%1$s" target="_blank">Additional payment methods</a> can be installed later.', 'woocommerce' ),
+					esc_url( admin_url( 'admin.php?page=wc-addons&view=payment-gateways' ) )
 				); ?>
 			</p>
 			<?php if ( $featured_gateways ) : ?>
@@ -1108,7 +1107,7 @@ class WC_Admin_Setup_Wizard {
 	public function wc_setup_extras() {
 		?>
 		<h1><?php esc_html_e( 'Extras', 'woocommerce' ); ?></h1>
-		<p><?php esc_html_e( 'Enhance your store with these extra features and themes.', 'woocommerce' ); ?></p>
+		<p><?php esc_html_e( 'Make the most of your store.', 'woocommerce' ); ?></p>
 		<form method="post">
 			<?php if ( $this->should_show_theme_extra() ) : ?>
 			<ul class="wc-wizard-services featured">
@@ -1117,6 +1116,11 @@ class WC_Admin_Setup_Wizard {
 						<h3><?php esc_html_e( 'Storefront Theme', 'woocommerce' ); ?></h3>
 						<p>
 							<?php esc_html_e( 'Your theme is not compatible with WooCommerce. We recommend you switch to Storefront, a free WordPress theme built and maintained by the makers of WooCommerce. If toggled on, Storefront will be installed and activated for you.', 'woocommerce' ); ?>
+						</p>
+						<p class="wc-wizard-service-learn-more">
+							<a href="<?php echo esc_url( 'https://woocommerce.com/storefront/' ); ?>" target="_blank">
+								<?php esc_html_e( 'Learn more about Storefront', 'woocommerce' ); ?>
+							</a>
 						</p>
 					</div>
 
